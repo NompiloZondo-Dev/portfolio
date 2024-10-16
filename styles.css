@@ -1,0 +1,393 @@
+* {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Home page styles */
+.container{
+    background: white;
+    height: 100vh;
+    width: 100%;
+
+}
+.name {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.letter-n {
+    color: #e9215d;
+}
+
+.name span {
+    color: #d80f19; 
+}
+.header{
+    padding: 10px 10%;
+    margin-bottom: 550px;
+}
+nav{
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a {
+    color:black;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width:0;
+    height:3px;
+    background: #d80f19;;
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    transition:0.55s ;
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+.header-text{
+    margin-top:20%;
+    font-size:30px;
+    text-align: center;
+  
+}
+.header-text h1{
+    margin-top:20px;
+    font-size:48px;
+    
+}
+.header-text h1 span{
+    color:#d80f19
+    
+}
+.description {
+    font-size: 30px;
+    color:black;
+    margin-top: 10px;
+    max-width: 600px; 
+    text-align: center;
+
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.dot {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 0; 
+        margin: 0;
+    }
+
+    .nav-list.active {
+        display: flex; 
+    }
+
+    .menu-toggle {
+        display: flex; 
+    }
+
+    ul li {
+        margin: 10px 0;
+        width: 100%;
+    }
+}
+
+/* About Section styles */
+.container-a {
+    width: 100%;
+    max-width: 1200px; /* Limit max width */
+    margin: auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    align-items: center; /* Center items vertically */
+}
+
+.about-col-1, .about-col-2 {
+    flex: 1; /* Equal width */
+    padding: 10px;
+}
+
+.about-col-1 img {
+    max-width: 70%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional styling */
+}
+
+.heading {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow skills to wrap */
+    margin-top: 10px;
+}
+
+.skill-card {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    flex: 1 1 120px; /* Allow flexibility and a minimum width */
+    text-align: center; /* Center text */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Stack columns on mobile */
+        text-align: center; /* Center text */
+    }
+
+    .about-col-1, .about-col-2 {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .heading {
+        font-size: 1.5rem; /* Smaller heading size */
+    }
+
+    .skill-card {
+        flex: 1 1 100%; /* Full width for skill cards */
+    }
+}
+
+
+/* Projects section styles */
+#projects {
+    padding: 40px;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    margin-top: 100px;
+    background-color: white;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    margin-top: 50px;
+    justify-content: space-around;
+}
+
+.project-title {
+    font-size: 2rem;
+}
+
+.project-card {
+    width: 250px; /* Set a fixed width for each card */
+    perspective: 1000px; /* Optional: for 3D effect */
+    display: none;
+}
+.project-card.active {
+    display: block; /* Show the active card */
+}
+.card {
+    width: 100%;
+    height: 300px; /* Set a fixed height for the card */
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff; /* Background color */
+}
+
+.project-image {
+    width: 100%; /* Make the image fill the width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 150px; /* Limit the height of the image */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.card-back {
+    background-color: #f8f8f8;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.project-buttons {
+    margin-top: 10px;
+}
+
+.project-buttons .btn {
+    margin: 5px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: none;
+    background-color: #282c34;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project-buttons .btn:hover {
+    background-color: #282c34;
+}
+#next-project {
+    padding: 10px 50px; /* Vertical and horizontal padding */
+    border: none; /* Remove default border */
+    background-color: #3a3f47; /* Dark background color */
+    color: white; /* White text color */
+    font-size: 1rem; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition effects */
+}
+
+#next-project:hover {
+    background-color: #3a3f47; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+#next-project:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center cards */
+    }
+
+    #next-project {
+        margin-top: 20px; /* Space out button from cards */
+    }
+}
+
+ /* Contact section styles*/
+.contact-section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height:100%;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    color: #555;
+    margin: 10px 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer section styles */
+footer {
+    background-color: #282c34; /* Dark background for the footer */
+    color: white; /* Text color */
+    padding: 20px; /* Space inside the footer */
+    text-align: center; /* Center text */
+}
+
+.footer-content {
+    max-width: 1200px; /* Limit max width */
+    margin: auto; /* Center the content */
+    margin-top: 30px;
+}
+
+.socials {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the icons */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 10px; /* Space between icons */
+    margin-top: 10px; /* Space above the social icons */
+}
+
+.social-icon {
+    color: white; /* Icon color */
+    font-size: 24px; /* Icon size */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition on hover */
+}
+
+.social-icon:hover {
+    color: #61dafb; /* Change color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 15px; /* Reduce padding on small screens */
+    }
+
+    .social-icon {
+        font-size: 20px; /* Adjust icon size on small screens */
+    }
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>My Portfolio</title>
+</head>
+<body>
+
+    <!---header-->
+    <div class="container">  
+        <div class="header">
+            <nav>
+                <h1 class="name">
+                    <span class="letter-n">N</span>Z.
+                </h1>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li> 
+                    <li><a href="#About-skills">About Me</a></li> 
+                    <li><a href="#About-skills">Skills</a></li> 
+                    <li><a href="#projects">Projects</a></li> 
+                    <li><a href="contact-section">Contact Me</a></li> 
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p class="subtitle">Software Developer</p>
+                <h1>Hi, I'm <span class="name">Nompilo Zondo</span></h1>
+           
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+    
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+
+<section id="About-skills">
+    <div class="container-a">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/me.jpg" alt="User Image">
+            </div>
+            <div class="about-col-2">
+                <h1 class="heading">About Me</h1>
+                <p>I’m an enthusiastic entry-level software developer with a passion for coding and problem-solving. 
+                    I completed my qualification in 2021, where I gained hands-on experience in programming
+                    languages such as JavaScript,Java,HTML,CSS and PHP. I enjoy building responsive web applications and am familiar with 
+                    frameworks like React. I thrive in collaborative environments and am eager to learn from 
+                    experienced professionals. My goal is to contribute to innovative projects while continuously expanding
+                    my skills in software development. I’m excited to start my career and make a meaningful impact in the tech industry.
+                </p>
+                
+                <h2 class="heading">My Tech Stack</h2>
+                <div class="skills-container">
+                    <div class="skill-card">JavaScript</div>
+                    <div class="skill-card">Java</div>
+                    <div class="skill-card">React</div>
+                    <div class="skill-card">HTML</div>
+                    <div class="skill-card">CSS</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="heading">Each Project is a unique piece of development</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <div class="card">
+                <div class="card-face card-front">
+                    <h3>Project 1: Dronoticz</h3>
+                    <img src="images/dronz.png" alt="Project 1 Image" class="project-image">
+                </div>
+                <div class="card-face card-back">
+                    <p>A drone website with articles ...HTML & CSS </p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/NompiloZondo-Dev/dronoticz.git" class="btn github">GitHub</a>
+                        <a href="https://nompilozondo-dev.github.io/dronoticz/index2.html" class="btn view">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="card">
+                <div class="card-face card-front">
+                    <h3>Project 2: eElectronics</h3>
+                    <img src="images/electronics.png" alt="Project 2 Image" class="project-image">
+                </div>
+                <div class="card-face card-back">
+                    <p> An eElectronics website is an online shopping platform for electronics.
+                        The<br> website provides an interface for searching,
+                        shipping to different location,and shopping cart<br>HTML CSS PHP JS</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/The-Winning-Team-Tshimologo/vite-react-pms.git" class="btn github">GitHub</a>
+                        <a href="#" class="btn view">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="card">
+                <div class="card-face card-front">
+                    <h3>Project 3: Weather Forecast</h3>
+                    <img src="images/weather.png" alt="Project 3 Image" class="project-image">
+                </div>
+                <div class="card-face card-back">
+                    <p>  A Weather forecast website has a map that allows you to 
+                        watch for<br> current temperature and weather conditions in
+                        your city or any other<br> location on the interactive global map..<br>CSS HTML JS</p>
+                    <div class="project-buttons">
+                        <a href="#" class="btn github">GitHub</a>
+                        <a href="#" class="btn view">View</a>
+                    </div>
+                </div>
+             
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="card">
+                <div class="card-face card-front">
+                    <h3>Project 4: Top Notch</h3>
+                    <img src="images/topnotch.png" alt="Project 3 Image" class="project-image">
+                </div>
+                <div class="card-face card-back">
+                    <p> A Top notch Group website is an online platform for registering a company.<br>
+                        The website provides an interface for sign up,Login and than it takes you
+                        to where you can add a company </p>
+                    <div class="project-buttons">
+                        <a href="#" class="btn github">GitHub</a>
+                        <a href="#" class="btn view">View</a>
+                    </div>
+                </div>
+             
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="card">
+                <div class="card-face card-front">
+                    <h3>Project 5: Calculator</h3>
+                    <img src="images/calculator.PNG" alt="Project 3 Image" class="project-image">
+                </div>
+                <div class="card-face card-back">
+                    <p> Calculator where you can add,delete,multiple ,divide and minus numbers<br> HTML & CSS </p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/NompiloZondo-Dev/Calculator.git" class="btn github">GitHub</a>
+                        <a href="https://nompilozondo-dev.github.io/Calculator/home" class="btn view">View</a>
+                    </div>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+    <button id="next-project">Next </button>
+</section>
+
+<div class="contact-section">
+    <h2>Contact Me</h2>
+    <p>Cell: <a href="tel:+1234567890">+27 68 442 7803</a></p>
+    <p>Email: <a href="mailto:example@example.com">nompilo.n.zondo@gmail.com</a></p>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="socials">
+            <a href="https://github.com/NompiloZondo-Dev " class="social-icon" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/nompilo-zondo-b8757820a/" class="social-icon" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
