@@ -5,8 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <title>My Portfolio</title>
+     <style>
+      
+        .scroll-icons {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .scroll-icon {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s;
+        }
+        .scroll-icon:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+    </style>
+    
 </head>
 <body>
 
@@ -193,6 +215,32 @@
     </div>
 </footer>
 
+    <div class="scroll-icons">
+    <a href="#top" class="scroll-icon" id="scroll-up">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+    <a href="#bottom" class="scroll-icon" id="scroll-down">
+        <i class="fas fa-chevron-down"></i>
+    </a>
+</div>
+
+<script>
+    document.querySelector('#scroll-up').addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    document.querySelector('#scroll-down').addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    });
+</script>
 
 
     <script src="script.js"></script>
