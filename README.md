@@ -12,4 +12,7 @@ This is my personal portfolio showcasing my projects and skills in web developme
 - Interactive project cards with hover effects
 - Links to live projects and GitHub repositories
 
+My portfolio link > https://nompilozondo-dev.github.io/portfolio/
+
+
 
